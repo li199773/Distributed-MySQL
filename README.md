@@ -8,7 +8,9 @@
         partition by hash(id) partitions 2;
     2.范围区间
     range:区间
+        partition by range(num)
+        (partition 1_7 values less than(8),
+        partition 8_14 values less than(15));
     list:范围
-    
 ## 02 MyCat
 ### 
