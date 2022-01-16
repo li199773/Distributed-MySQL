@@ -8,6 +8,7 @@
         partition by hash(id) partitions 2;
     2.范围区间
     range:区间
+        # 7天分一个区
         partition by range(num)
         (partition 1_7 values less than(8),
         partition 8_14 values less than(15));
