@@ -13,7 +13,7 @@
         (partition 1_7 values less than(8),
         partition 8_14 values less than(15));
     list:范围
-    #
+        # 跟range类似
         partition by list(num)
         (partition 1_7 values in(1,2,3,4,5,6,7),
         partition 8_14 values in(8,9,10,11,12,13,14),
