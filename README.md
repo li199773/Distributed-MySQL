@@ -7,7 +7,8 @@
     hash算法：内置的hash算法运算数字
         partition by hash(id) partitions 2;
     2.范围区间
-    list:范围
     range:区间
+    list:范围
+    
 ## 02 MyCat
 ### 
