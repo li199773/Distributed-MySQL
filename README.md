@@ -13,5 +13,11 @@
         (partition 1_7 values less than(8),
         partition 8_14 values less than(15));
     list:范围
+    #
+        partition by list(num)
+        (partition 1_7 values in(1,2,3,4,5,6,7),
+        partition 8_14 values in(8,9,10,11,12,13,14),
+        partition 15_21 values in(15,16,17,18,19,20,21),
+        partition 22_28 values in(22,23,24,25,26,27,28));
 ## 02 MyCat
 ### 
