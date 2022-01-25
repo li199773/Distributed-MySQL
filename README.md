@@ -40,3 +40,4 @@
     3.server.xml：定义用户及系统相关变量，如端口等
     4.sequence_db_conf.properties:全局序列定义
 ## 03 主从复制
+### 
