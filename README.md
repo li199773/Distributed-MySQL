@@ -46,7 +46,6 @@
     (3)Slave的SQL thread线程执行Relay log的事件，将改变执行一遍,同步到Slave的数据库中
 ### Master配置:
     修改配置文件：sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
-    (1)Master1配置
     # 主服务器唯一ID
     server-id=1
     #启用二进制日志
@@ -60,7 +59,7 @@
     binlog_format=STATEMENT
     # 在作为从数据库的时候，有写入操作也要更新二进制日志文件
     log-slave-updates
-    (2)Slave1配置
+### Slave配置
     #从服务器唯一ID
     server-id=2
     #启用中继日志
