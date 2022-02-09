@@ -60,3 +60,8 @@
     binlog_format=STATEMENT
     # 在作为从数据库的时候，有写入操作也要更新二进制日志文件
     log-slave-updates
+    (2)Slave1配置
+    #从服务器唯一ID
+    server-id=2
+    #启用中继日志
+    relay-log=mysql-relay
