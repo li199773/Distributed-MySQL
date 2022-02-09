@@ -40,5 +40,7 @@
     3.server.xml：定义用户及系统相关变量，如端口等
     4.sequence_db_conf.properties:全局序列定义
 ## 03 主从复制
-### 
-###
+### 原理：
+    (1)master将改变记录到二进制日志(Binary log)
+    (2)Slave访问Master将Master的Binary log 记录拷贝到Slave的中继日志(Relay log)
+    (3)Slave的SQL thread线程执行Relay log的事件，将改变执行一遍,同步到Slave的数据库中
