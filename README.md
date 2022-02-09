@@ -45,3 +45,18 @@
     (2)Slave访问Master将Master的Binary log 记录拷贝到Slave的中继日志(Relay log)
     (3)Slave的SQL thread线程执行Relay log的事件，将改变执行一遍,同步到Slave的数据库中
 ### Master配置:
+    修改配置文件：sudo vim /etc/mysql/mysql.conf.d/mysqld.cnf
+    (1)Master1配置
+    # 主服务器唯一ID
+    server-id=1
+    #启用二进制日志
+    log-bin=mysql-bin
+    # 设置不要复制的数据库(可设置多个)
+    binlog-ignore-db=mysql
+    binlog-ignore-db=information_schema
+    # 设置需要复制的数据库
+    binlog-do-db=需要复制的主数据库名字
+    # 设置logbin格式
+    binlog_format=STATEMENT
+    # 在作为从数据库的时候，有写入操作也要更新二进制日志文件
+    log-slave-updates
