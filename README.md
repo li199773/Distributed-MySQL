@@ -64,4 +64,4 @@
     server-id=2
     #启用中继日志
     relay-log=mysql-relay
-### (3)Master2、Slave2同理。修改id分别为3、4(双主从复制情况下)
+### (3)`Master2`、`Slave2`同理。修改id分别为`3`、`4`(双主从复制情况下)
