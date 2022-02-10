@@ -65,3 +65,5 @@
     #启用中继日志
     relay-log=mysql-relay
 ### (3)`Master2`、`Slave2`同理。修改id分别为`3`、`4`(双主从复制情况下)
+### (4)重启 mysql 服务
+### (5)两台主机上建立帐户并授权 slave
