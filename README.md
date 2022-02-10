@@ -71,3 +71,14 @@
     GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' IDENTIFIED BY '123456';
     #查询Master1、Master2的状态，分别记录下File和Position的值
     show master status;
+### (6)在从机上配置需要复制的主机
+    Slava1 复制 Master1，Slava2 复制 Master2，Master1 复制 Master2
+    #复制主机的命令
+    CHANGE MASTER TO MASTER_HOST='主机的IP地址',
+    MASTER_USER='slave',
+    MASTER_PASSWORD='123456',
+    MASTER_LOG_FILE='mysql-bin.具体数字',MASTER_LOG_POS=具体值;
+    #启动两台从服务器复制功能
+    start slave;
+    #查看从服务器状态
+    show slave status\G;
