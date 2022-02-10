@@ -82,3 +82,6 @@
     start slave;
     #查看从服务器状态
     show slave status\G;
+    # Slave_IO_Running: Yes
+    # Slave_SQL_Running: Yes
+    显示配置成功
