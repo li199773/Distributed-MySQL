@@ -65,8 +65,8 @@
     #启用中继日志
     relay-log=mysql-relay
 ### (3)`Master2`、`Slave2`同理。修改id分别为`3`、`4`(双主从复制情况下)
-### (4)重启 mysql 服务
-### (5)两台主机上建立帐户并授权 slave
+### (4)重启 `mysql` 服务
+### (5)两台主机上建立帐户并授权 `slave`
     #在主机Master1、Master2 MySQL里执行授权命令
     GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' IDENTIFIED BY '123456';
     #查询Master1、Master2的状态，分别记录下File和Position的值
