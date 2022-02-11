@@ -85,3 +85,4 @@
     # Slave_IO_Running: Yes
     # Slave_SQL_Running: Yes
     显示配置成功
+## 04 读写分离
