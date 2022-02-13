@@ -24,7 +24,7 @@
     1.求余分区的情况下不会删除数据，数据会自定分配给其他的分区
     2.范围分区的话删除分区的话会直接把数据给删除掉
     分区没有修改的功能
-## `02 MyCat`
+## 02 `MyCat`
 ### 为什么使用`Mycat`.
     1.代码与数据库紧耦合
     2.高访问量并发对数据库的压力
@@ -39,7 +39,7 @@
     2.rule.xml：定义分片规则
     3.server.xml：定义用户及系统相关变量，如端口等
     4.sequence_db_conf.properties:全局序列定义
-## `03 主从复制`
+## 03 `主从复制`
 ### 原理：
     (1)master将改变记录到二进制日志(Binary log)
     (2)Slave访问Master将Master的Binary log 记录拷贝到Slave的中继日志(Relay log)
@@ -85,6 +85,6 @@
     # Slave_IO_Running: Yes
     # Slave_SQL_Running: Yes
     显示配置成功
-## `04 读写分离`
+## 04 `读写分离`
 ### 不用针对每个表进行配置，只需要在schema.xml中的元素上增加dataNode="defaultDN"属性，并配置此dataNode对应的真实物理数据库的database，然后dataHost开启读写分离功能即可。配置实例详情见`Write-Read.py`文件
-## 05 日期分片
+## 05 `日期分片`
