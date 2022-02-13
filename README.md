@@ -89,3 +89,7 @@
 ### 不用针对每个表进行配置，只需要在schema.xml中的元素上增加dataNode="defaultDN"属性，并配置此dataNode对应的真实物理数据库的database，然后dataHost开启读写分离功能即可。配置实例详情见`Write-Read.py`文件
 ## 05 `日期分片`
 ## 常用的分片规则：
+    1、取模
+    2、分片枚举
+    3、范围约定
+    4、按日期（天）分片
